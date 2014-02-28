@@ -1,0 +1,47 @@
+name: Minecraft-LogTweet
+main: com.github.gurapomu.MinecraftLogTweet.MinecraftLogTweet
+version: 1.0
+author: gurapomu
+description: -no desc-
+commands:
+  getauthurl:
+    description: OAuth authentication 1
+    usage: /oauth
+    permission: Minecraft-LogTweet.oauth
+    permission-message: You don't have [<permission>]
+  authpin:
+    description: OAuth authentication 2
+    usage: /oauthpin [PIN]
+    permission: Minecraft-LogTweet.oauth
+    permission-message: You don't have [<permission>]
+  tweet:
+    description: tweeting something string
+    usage: /tweet [STR]
+    permission: Minecraft_LogTweet.tweet
+    permission-message: You don't have [<permission>]
+  shinchoku:
+    description: tweeting your SHINCHOKU
+    permission: Minecraft_LogTweet.tweet
+    permission-message: You don't have [<permission>]
+  prime:
+    description: determining the prime
+    usage: /prime [INT]
+    permission: Minecraft_LogTweet.tweet
+    permission-message: You don't have [<permission>]
+  reply:
+    description: sending reply
+    usage: /reply [UserName] [str]
+    permission: Minecraft_LogTweet.tweet
+    permission-message: You don't have [<permission>]
+  rt:
+    description: retweeting status
+    usage: /rt [int]
+    permission: Minecraft_LogTweet.rt
+    permission-message: You don't have [<permission>]
+  fav:
+    description: adding favorite status
+    usage: /fav [int]
+    permission: Minecraft_LogTweet.fav
+    permission-message: You don't have [<permission>]
+
+  

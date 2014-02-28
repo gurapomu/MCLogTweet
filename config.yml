@@ -1,0 +1,63 @@
+# default config.yml
+# Used language depends on the locale of the JVM
+
+# This Message will be tweeted when the server is started.
+# Available constants ... [screenName], [dateAndTime], [serverName], [serverMOTD]
+# [screenName] is the ID of the account being authenticated.
+
+startMessageJP: "?T?[?o?[???N?????????. (?A?J?E???g:[screenName]) [dateAndTime]"
+
+startMessageEN: "The server started. (Auth by [screenName]) [dateAndTime]"
+
+
+# This Message will be tweeted when the server is stopped.
+# Available constants ... [screenName], [dateAndTime], [serverName], [serverMOTD]
+# [screenName] is the ID of the account being authenticated.
+
+stopMessageJP: "?T?[?o?[???I?????????. [dateAndTime]"
+
+stopMessageEN: "The server stopped. [dateAndTime]"
+
+
+# This Message will be tweeted if someone logs in.
+# Available constants ... [dateAndTime], [serverName], [serverMOTD], [onlinePlayerName], [onlinePlayerNumber]
+# [playerName] is the name of the person who login.
+# [onlinePlayerName] is names of all the logged in players.
+# [onlinePlayerNumber] is Number of logged in players.
+
+loginMessageJP: "[playerName]?????O?C?????????. [dateAndTime]"
+
+loginMessageEN: "[playerName] has logged in. [dateAndTime]"
+
+
+# This Message will be tweeted if someone logs out.
+# Available constants ... [dateAndTime], [serverName], [serverMOTD], [onlinePlayerName], [onlinePlayerNumber]
+# [playerName] is the name of the person who logout.
+
+logoutMessageJP: "[playerName]?????O?A?E?g???????. [dateAndTime]"
+
+logoutMessageEN: "[playerName] has logged out. [dateAndTime]"
+
+
+# This Message will be tweeted when someone enters command "tweet".
+# Available constants ... [tweetString], [playerName], [dateAndTime], [serverName], [serverMOTD]
+# [playerName] is command "tweet" sender.
+
+tweetMessageJP: "???b?Z?[?W:[tweetString] ???M??:[playerName] [dateAndTime]"
+
+tweetMessageEN: "Message:[tweetString] (send by [playerName]) [dateAndTime]"
+
+# This message will be tweeted every <tweetInterval> minutes.
+# Available constants ... [dateAndTime], [serverName], [serverMOTD], [onlinePlayerName], [onlinePlayerNumber]
+
+regularTweetNPJP: "?I?????C????v???C???[?????????. [dateAndTime]"
+regularTweetJP: "[onlinePlayerNumber]?l??v???C???[???I?????C?????. ([onlinePlayerName]) [dateAndTime]"
+
+regularTweetNPEN: "There is no player. [dateAndTime]"
+regularTweetEN: "[onlinePlayerNumber] players are online. ([onlinePlayerName]) [dateAndTime]"
+
+tweetInterval: 60
+
+replyCommandOP: 
+
+timeline: false
