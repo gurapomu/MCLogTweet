@@ -4,10 +4,16 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class playerQuitEvent extends JavaPlugin implements Listener {
+public class playerQuitEvent implements Listener {
 
+	private MinecraftLogTweet plugin;
+	
+	public playerQuitEvent(MinecraftLogTweet plugin) {
+		
+		this.plugin = plugin;
+	}
+	
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void playerQuit(PlayerQuitEvent event){
 		
@@ -27,6 +33,6 @@ public class playerQuitEvent extends JavaPlugin implements Listener {
 		
 		Authorization.tweetString(str);
 		
-		MinecraftLogTweet.server = this.getServer();
+		MinecraftLogTweet.server = plugin.getServer();
 	}
 }
