@@ -2,20 +2,18 @@ package com.github.gurapomu.MinecraftLogTweet;
 
 import java.util.Calendar;
 import java.util.Locale;
-import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import org.bukkit.OfflinePlayer;
 import org.bukkit.Server;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.github.gurapomu.MinecraftLogTweet.Authorization.MyStatusListener;
-
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import twitter4j.auth.AccessToken;
+
+import com.github.gurapomu.MinecraftLogTweet.Authorization.MyStatusListener;
 
 public class MinecraftLogTweet extends JavaPlugin {
 	
@@ -37,8 +35,8 @@ public class MinecraftLogTweet extends JavaPlugin {
 		this.loadConfig();
 		serverName = this.getServer().getName();
 		serverMOTD = this.getServer().getMotd();
-		getServer().getPluginManager().registerEvents(new playerJoinEvent(), this);
-		getServer().getPluginManager().registerEvents(new playerQuitEvent(), this);
+		getServer().getPluginManager().registerEvents(new playerJoinEvent(this), this);
+		getServer().getPluginManager().registerEvents(new playerQuitEvent(this), this);
 		getServer().getPluginManager().registerEvents(new playerDeathEvent(), this);
 		
 		player = this.getServer().getOnlinePlayers().length;

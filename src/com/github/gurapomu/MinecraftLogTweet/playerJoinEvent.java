@@ -4,10 +4,16 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class playerJoinEvent extends JavaPlugin implements Listener {
+public class playerJoinEvent implements Listener {
 
+	private MinecraftLogTweet plugin;
+	
+	public playerJoinEvent(MinecraftLogTweet plugin) {
+		
+		this.plugin = plugin;
+	}
+	
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void playerJoin(PlayerJoinEvent event){
 		
@@ -27,6 +33,6 @@ public class playerJoinEvent extends JavaPlugin implements Listener {
 		
 		Authorization.tweetString(str);
 		
-		MinecraftLogTweet.server = this.getServer();
+		MinecraftLogTweet.server = plugin.getServer();
 	}
 }
