@@ -27,11 +27,15 @@ public class playerQuitEvent implements Listener {
 		}
 		
 		MinecraftLogTweet.player--;
-		String str = MinecraftLogTweet.logoutMessage;
-		str = MinecraftLogTweet.subStr(str, "[playerName]", event.getPlayer().getName());
-		str = MinecraftLogTweet.checkConstants(str);
-		
-		Authorization.tweetString(str);
+
+        if(MinecraftLogTweet.logoutTweet == true){
+
+            String str = MinecraftLogTweet.logoutMessage;
+            str = MinecraftLogTweet.subStr(str, "[playerName]", event.getPlayer().getName());
+            str = MinecraftLogTweet.checkConstants(str);
+
+            Authorization.tweetString(str);
+        }
 		
 		MinecraftLogTweet.server = plugin.getServer();
 	}

@@ -9,7 +9,10 @@ public class playerDeathEvent implements Listener {
 
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void playerDeath(PlayerDeathEvent event){
-		
-		Authorization.tweetString(event.getDeathMessage() + "  " + MinecraftLogTweet.getTime());
+
+        if(MinecraftLogTweet.deathTweet == true){
+
+            Authorization.tweetString(event.getDeathMessage() + "  " + MinecraftLogTweet.getTime());
+        }
 	}
 }

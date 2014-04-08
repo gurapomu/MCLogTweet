@@ -20,7 +20,7 @@ public class MinecraftLogTweet extends JavaPlugin {
 	public static Player[] playerName = new Player[256];
 	public static String serverName, serverMOTD, localeLang;
 	public static String startMessage, stopMessage, loginMessage, logoutMessage, tweetMessage, regularTweetMessage, regularTweetMessageNP, replyCommandOP;
-	public static boolean timeline;
+	public static boolean timeline, startTweet, stopTweet, loginTweet, logoutTweet, deathTweet, regularTweet;
 	public static int player;
 	private ltCommand myExecutor;
 	public static TwitterStream twStream = new TwitterStreamFactory().getInstance();
@@ -56,11 +56,14 @@ public class MinecraftLogTweet extends JavaPlugin {
 			
 			System.out.println("Please enter command (/getauthurl /authpin)");
 		} else{
-			
-			String str = startMessage;
-			str = checkConstants(str);
-			
-			Authorization.tweetString(str);
+
+            if(MinecraftLogTweet.startTweet == true){
+
+                String str = startMessage;
+                str = checkConstants(str);
+
+                Authorization.tweetString(str);
+            }
 			
 			twStream.setOAuthConsumer(oauthKey.consumerKey, oauthKey.consumerSecret);
 			twStream.setOAuthAccessToken(Authorization.loadAccessToken());
@@ -89,11 +92,14 @@ public class MinecraftLogTweet extends JavaPlugin {
 			
 			System.out.println("Please enter command (/getauthurl /authpin)");
 		} else{
-			
-			String str = stopMessage;
-			str = checkConstants(str);
-			
-			Authorization.tweetString(str);
+
+            if(MinecraftLogTweet.stopTweet = true){
+
+                String str = stopMessage;
+                str = checkConstants(str);
+
+                Authorization.tweetString(str);
+            }
 		}
 		
 		Authorization.stopStreaming(twStream);
@@ -167,6 +173,11 @@ public class MinecraftLogTweet extends JavaPlugin {
 		
 		replyCommandOP = this.getConfig().getString("replyCommandOP");
 		timeline = this.getConfig().getBoolean("timeline");
+        startTweet = this.getConfig().getBoolean("startTweet");
+        stopTweet = this.getConfig().getBoolean("stopTweet");
+        loginTweet = this.getConfig().getBoolean("loginTweet");
+        logoutTweet = this.getConfig().getBoolean("logoutTweet");
+        regularTweet = this.getConfig().getBoolean("regularTweet");
 		
 		if(Locale.getDefault().getLanguage().equals("ja")){
 			

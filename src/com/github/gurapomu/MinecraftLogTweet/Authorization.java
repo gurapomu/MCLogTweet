@@ -210,13 +210,13 @@ public class Authorization {
 		
 		@Override
 		public void onDeletionNotice(StatusDeletionNotice arg0) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onStallWarning(StallWarning arg0) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
@@ -227,7 +227,6 @@ public class Authorization {
 				statusNum = -1;
 			
 			timelineStatus[++statusNum] = arg0;
-			System.out.println(statusNum);
 			if(MinecraftLogTweet.timeline == true){
 			
 				for(int i = 0; i < MinecraftLogTweet.playerName.length; i++){
@@ -253,10 +252,10 @@ public class Authorization {
 						s = s.replace("/", "");
 						
 						if(checkCommand(s) == false)
-							tweetString("@" + arg0.getUser().getScreenName() + " ä½¿ç”¨å¯èƒ½ãªã‚³ãƒãƒ³ãƒ‰ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚³ãƒãƒ³ãƒ‰ã®ã‚¹ãƒšãƒ«ã€å¼•æ•°ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚");
+							tweetString("@" + arg0.getUser().getScreenName() + " g—p‰Â”\‚ÈƒRƒ}ƒ“ƒh‚Å‚Í‚ ‚è‚Ü‚¹‚ñBƒRƒ}ƒ“ƒh‚ÌƒXƒyƒ‹Aˆø”‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B " + MinecraftLogTweet.getTime());
 					} else{
 						
-						tweetString("@" + arg0.getUser().getScreenName() + " replyCommandã®æ¨©é™ãŒã‚ã‚Šã¾ã›ã‚“ã€‚ " + MinecraftLogTweet.getTime());
+						tweetString("@" + arg0.getUser().getScreenName() + " replyCommand‚ÌŒ ŒÀ‚ª‚ ‚è‚Ü‚¹‚ñB " + MinecraftLogTweet.getTime());
 					}
 				} else{
 					
@@ -264,35 +263,35 @@ public class Authorization {
 					
 						if(MinecraftLogTweet.playerName[i] == null)	continue;
 				
-						MinecraftLogTweet.playerName[i].sendMessage(ChatColor.YELLOW + "@" + arg0.getUser().getScreenName() + "ã‹ã‚‰ã®ãƒªãƒ—ãƒ©ã‚¤: " + arg0.getText());
+						MinecraftLogTweet.playerName[i].sendMessage(ChatColor.YELLOW + "@" + arg0.getUser().getScreenName() + "‚©‚ç‚ÌƒŠƒvƒ‰ƒC: " + arg0.getText());
 					}
 
-					System.out.println("@" + arg0.getUser().getScreenName() + "ã‹ã‚‰ã®ãƒªãƒ—ãƒ©ã‚¤: " + arg0.getText());
+					System.out.println("@" + arg0.getUser().getScreenName() + "‚©‚ç‚ÌƒŠƒvƒ‰ƒC: " + arg0.getText());
 				}
 			}
 		}
 
 		@Override
 		public void onTrackLimitationNotice(int arg0) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onException(Exception arg0) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onBlock(User arg0, User arg1) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onDeletionNotice(long arg0, long arg1) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
@@ -310,28 +309,28 @@ public class Authorization {
 				
 				Random rnd = new Random();
 				int r = rnd.nextInt(10) + 1;
-				MinecraftLogTweet.playerName[i].sendMessage(arg0.getScreenName() + "ã«ãµãã¼ã‚‰ã‚Œã¦" + r + "EXPã‚’å…¥æ‰‹ã—ãŸã€‚");
+				MinecraftLogTweet.playerName[i].sendMessage(arg0.getScreenName() + "‚É‚Ó‚Ÿ‚Ú‚ç‚ê‚Ä" + r + "EXP‚ğ“üè‚µ‚½B");
 				MinecraftLogTweet.playerName[i].giveExp(r);
 			}
 			
-			System.out.println(arg0.getScreenName() + "ã«ãµãã¼ã‚‰ã‚Œã¾ã—ãŸã€‚");
+			System.out.println(arg0.getScreenName() + "‚É‚Ó‚Ÿ‚Ú‚ç‚ê‚Ü‚µ‚½B");
 		}
 
 		@Override
 		public void onFollow(User arg0, User arg1) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onFriendList(long[] arg0) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onUnblock(User arg0, User arg1) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
@@ -345,64 +344,64 @@ public class Authorization {
 				Random rnd = new Random();
 				int r = rnd.nextInt(3);
 				
-				MinecraftLogTweet.playerName[i].sendMessage(arg0.getScreenName() + "ã«ã‚ã‚“ãµãã¼ã•ã‚Œã¦ç§»å‹•é€Ÿåº¦ãŒ" + (r+1) + "ä¸‹ãŒã£ãŸ");
+				MinecraftLogTweet.playerName[i].sendMessage(arg0.getScreenName() + "‚É‚ ‚ñ‚Ó‚Ÿ‚Ú‚³‚ê‚ÄˆÚ“®‘¬“x‚ª" + (r+1) + "‰º‚ª‚Á‚½");
 				MinecraftLogTweet.playerName[i].addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 30*20, r), true);
 			}
 			
-			System.out.println(arg0.getScreenName() + "ã‚ã‚“ãµãã¼ã•ã‚ŒãŸã€‚");
+			System.out.println(arg0.getScreenName() + "‚ ‚ñ‚Ó‚Ÿ‚Ú‚³‚ê‚½B");
 		}
 
 		@Override
 		public void onUserListCreation(User arg0, UserList arg1) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onUserListDeletion(User arg0, UserList arg1) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onUserListMemberAddition(User arg0, User arg1, UserList arg2) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onUserListMemberDeletion(User arg0, User arg1, UserList arg2) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onUserListSubscription(User arg0, User arg1, UserList arg2) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onUserListUnsubscription(User arg0, User arg1, UserList arg2) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onUserListUpdate(User arg0, UserList arg1) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onUserProfileUpdate(User arg0) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 
 		@Override
 		public void onScrubGeo(long arg0, long arg1) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			
 		}
 	}

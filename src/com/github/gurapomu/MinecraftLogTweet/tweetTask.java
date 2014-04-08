@@ -8,18 +8,21 @@ public class tweetTask extends TimerTask {
 	public void run(){
 		
 		if(Authorization.loadAccessToken() == null)	return;
-		
-		if(MinecraftLogTweet.player == 0){
-			
-			String str = MinecraftLogTweet.regularTweetMessageNP;
-			str = MinecraftLogTweet.checkConstants(str);
-			
-			Authorization.tweetString(str);
-		} else{
-			
-			String str = MinecraftLogTweet.regularTweetMessage;
-			str = MinecraftLogTweet.checkConstants(str);
-			Authorization.tweetString(str);
-		}
+
+        if(MinecraftLogTweet.regularTweet == true){
+
+            if(MinecraftLogTweet.player == 0){
+
+                String str = MinecraftLogTweet.regularTweetMessageNP;
+                str = MinecraftLogTweet.checkConstants(str);
+
+                Authorization.tweetString(str);
+            } else{
+
+                String str = MinecraftLogTweet.regularTweetMessage;
+                str = MinecraftLogTweet.checkConstants(str);
+                Authorization.tweetString(str);
+            }
+        }
 	}
 }

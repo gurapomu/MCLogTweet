@@ -27,11 +27,15 @@ public class playerJoinEvent implements Listener {
 		}
 		
 		MinecraftLogTweet.player++;
-		String str = MinecraftLogTweet.loginMessage;
-		str = MinecraftLogTweet.subStr(str, "[playerName]", event.getPlayer().getName());
-		str = MinecraftLogTweet.checkConstants(str);
-		
-		Authorization.tweetString(str);
+
+        if(MinecraftLogTweet.loginTweet == true){
+
+            String str = MinecraftLogTweet.loginMessage;
+            str = MinecraftLogTweet.subStr(str, "[playerName]", event.getPlayer().getName());
+            str = MinecraftLogTweet.checkConstants(str);
+
+            Authorization.tweetString(str);
+        }
 		
 		MinecraftLogTweet.server = plugin.getServer();
 	}
