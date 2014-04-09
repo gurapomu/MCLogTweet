@@ -313,7 +313,7 @@ public class Authorization {
 				MinecraftLogTweet.playerName[i].giveExp(r);
 			}
 			
-			System.out.println(arg0.getScreenName() + "にふぁぼられました。");
+			System.out.println(arg0.getScreenName() + "にふぁぼられた");
 		}
 
 		@Override
@@ -341,14 +341,10 @@ public class Authorization {
 				
 				if(MinecraftLogTweet.playerName[i] == null)	continue;
 				
-				Random rnd = new Random();
-				int r = rnd.nextInt(3);
-				
-				MinecraftLogTweet.playerName[i].sendMessage(arg0.getScreenName() + "にあんふぁぼされて移動速度が" + (r+1) + "下がった");
-				MinecraftLogTweet.playerName[i].addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 30*20, r), true);
+				MinecraftLogTweet.playerName[i].sendMessage(arg0.getScreenName() + "にあんふぁぼされた");
 			}
 			
-			System.out.println(arg0.getScreenName() + "あんふぁぼされた。");
+			System.out.println(arg0.getScreenName() + "にあんふぁぼされた。");
 		}
 
 		@Override
