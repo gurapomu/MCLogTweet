@@ -5,6 +5,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Locale;
 import java.util.Random;
 
@@ -62,7 +66,27 @@ public class ltCommand implements CommandExecutor {
 				System.out.println("This command can only be run by console.");
 			}
 			return true;
-		} else if (cmd.getName().equalsIgnoreCase("tweet")){
+		} else if (cmd.getName().equalsIgnoreCase("authrm")){
+
+            File f = Authorization.createAccessTokenFileName();
+
+            if(f.exists()){
+
+                System.out.println("cannot found accestoken.dat");
+                return true;
+            }
+
+            try {
+
+                f.delete();
+            } catch(SecurityException se){
+
+                se.printStackTrace();
+                return true;
+            }
+            System.out.println("Complete removing accesstoken.dat");
+            return true;
+        } else if (cmd.getName().equalsIgnoreCase("tweet")){
 			
 			if(args[0] == null){
 					

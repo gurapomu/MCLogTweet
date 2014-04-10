@@ -9,8 +9,6 @@ import java.io.ObjectOutputStream;
 import java.util.Random;
 
 import org.bukkit.ChatColor;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
 import twitter4j.DirectMessage;
 import twitter4j.StallWarning;
@@ -313,7 +311,7 @@ public class Authorization {
 				MinecraftLogTweet.playerName[i].giveExp(r);
 			}
 			
-			System.out.println(arg0.getScreenName() + "Ç…Ç”ÇüÇ⁄ÇÁÇÍÇΩ");
+			System.out.println(arg0.getScreenName() + "Ç…Ç”ÇüÇ⁄ÇÁÇÍÇΩÅB");
 		}
 
 		@Override

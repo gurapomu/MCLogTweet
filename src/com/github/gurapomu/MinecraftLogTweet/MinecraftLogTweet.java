@@ -18,7 +18,7 @@ import com.github.gurapomu.MinecraftLogTweet.Authorization.MyStatusListener;
 public class MinecraftLogTweet extends JavaPlugin {
 	
 	public static Player[] playerName = new Player[256];
-	public static String serverName, serverMOTD, localeLang;
+	public static String serverName, serverMOTD;
 	public static String startMessage, stopMessage, loginMessage, logoutMessage, tweetMessage, regularTweetMessage, regularTweetMessageNP, replyCommandOP;
 	public static boolean timeline, startTweet, stopTweet, loginTweet, logoutTweet, deathTweet, regularTweet;
 	public static int player;
@@ -52,7 +52,7 @@ public class MinecraftLogTweet extends JavaPlugin {
 		}
 		server = this.getServer();
 		
-		if(Authorization.loadAccessToken() == (AccessToken) null){
+		if(Authorization.loadAccessToken() == null){
 			
 			System.out.println("Please enter command (/getauthurl /authpin)");
 		} else{
@@ -75,6 +75,7 @@ public class MinecraftLogTweet extends JavaPlugin {
 		myExecutor = new ltCommand(this);
 		getCommand("getauthurl").setExecutor(myExecutor);
 		getCommand("authpin").setExecutor(myExecutor);
+        getCommand("authrm").setExecutor(myExecutor);
 		getCommand("tweet").setExecutor(myExecutor);
 		getCommand("shinchoku").setExecutor(myExecutor);
 		getCommand("prime").setExecutor(myExecutor);
@@ -88,12 +89,12 @@ public class MinecraftLogTweet extends JavaPlugin {
 		
 		timer.cancel();
 		
-		if(Authorization.loadAccessToken() == (AccessToken) null){
+		if(Authorization.loadAccessToken() == null){
 			
 			System.out.println("Please enter command (/getauthurl /authpin)");
 		} else{
 
-            if(MinecraftLogTweet.stopTweet = true){
+            if(MinecraftLogTweet.stopTweet == true){
 
                 String str = stopMessage;
                 str = checkConstants(str);

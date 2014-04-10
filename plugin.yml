@@ -6,12 +6,17 @@ description: -no desc-
 commands:
   getauthurl:
     description: OAuth authentication 1
-    usage: /oauth
+    usage: /getauthurl
     permission: Minecraft-LogTweet.oauth
     permission-message: You don't have [<permission>]
   authpin:
     description: OAuth authentication 2
-    usage: /oauthpin [PIN]
+    usage: /authpin [PIN]
+    permission: Minecraft-LogTweet.oauth
+    permission-message: You don't have [<permission>]
+  authrm:
+    description: remove accesstoken file
+    usage: /authrm
     permission: Minecraft-LogTweet.oauth
     permission-message: You don't have [<permission>]
   tweet:
