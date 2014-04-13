@@ -242,8 +242,8 @@ public class Authorization {
 				s = s.replace(r, "");
 				if(s.startsWith("/") == true){
 					
-					System.out.println(MinecraftLogTweet.replyCommandOP);
-					System.out.println(arg0.getUser().getScreenName());
+					//System.out.println(MinecraftLogTweet.replyCommandOP);
+					//System.out.println(arg0.getUser().getScreenName());
 					
 					if(arg0.getUser().getScreenName().equals(MinecraftLogTweet.replyCommandOP)){
 						
