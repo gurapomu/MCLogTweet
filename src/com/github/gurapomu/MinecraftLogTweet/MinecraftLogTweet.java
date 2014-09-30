@@ -19,7 +19,7 @@ public class MinecraftLogTweet extends JavaPlugin {
 	
 	public static Player[] playerName = new Player[256];
 	public static String serverName, serverMOTD;
-	public static String startMessage, stopMessage, loginMessage, logoutMessage, tweetMessage, regularTweetMessage, regularTweetMessageNP, replyCommandOP;
+	public static String startMessage, stopMessage, loginMessage, logoutMessage, tweetMessage, regularTweetMessage, regularTweetMessageNP, replyCommandOP, language;
 	public static boolean timeline, startTweet, stopTweet, loginTweet, logoutTweet, deathTweet, regularTweet;
 	public static int player;
 	private ltCommand myExecutor;
@@ -179,8 +179,10 @@ public class MinecraftLogTweet extends JavaPlugin {
         loginTweet = this.getConfig().getBoolean("loginTweet");
         logoutTweet = this.getConfig().getBoolean("logoutTweet");
         regularTweet = this.getConfig().getBoolean("regularTweet");
+        language = this.getConfig().getString("language");
+
 		
-		if(Locale.getDefault().getLanguage().equals("ja")){
+		if(language.equalsIgnoreCase("japanese")){
 			
 			startMessage = this.getConfig().getString("startMessageJP");
 			stopMessage = this.getConfig().getString("stopMessageJP");

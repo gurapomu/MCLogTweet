@@ -326,6 +326,12 @@ public class Authorization {
 			
 		}
 
+        @Override
+        public void onUnfollow(User arg0, User arg1){
+
+            
+        }
+
 		@Override
 		public void onUnblock(User arg0, User arg1) {
 			// TODO 自動生成されたメソッド・スタブ

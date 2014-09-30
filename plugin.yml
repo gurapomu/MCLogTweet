@@ -1,6 +1,6 @@
 name: Minecraft-LogTweet
 main: com.github.gurapomu.MinecraftLogTweet.MinecraftLogTweet
-version: 1.0
+version: 1.2
 author: gurapomu
 description: -no desc-
 commands:

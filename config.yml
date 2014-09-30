@@ -5,7 +5,7 @@
 # Available constants ... [screenName], [dateAndTime], [serverName], [serverMOTD]
 # [screenName] is the ID of the account being authenticated.
 
-startMessageJP: "ƒT[ƒo[‚ª‹N“®‚µ‚Ü‚µ‚½. (ƒAƒJƒEƒ“ƒg:[screenName]) [dateAndTime]"
+startMessageJP: "ã‚µãƒ¼ãƒãƒ¼ãŒèµ·å‹•ã—ã¾ã—ãŸ. (ã‚¢ã‚«ã‚¦ãƒ³ãƒˆ:[screenName]) [dateAndTime]"
 
 startMessageEN: "The server started. (Auth by [screenName]) [dateAndTime]"
 
@@ -14,7 +14,7 @@ startMessageEN: "The server started. (Auth by [screenName]) [dateAndTime]"
 # Available constants ... [screenName], [dateAndTime], [serverName], [serverMOTD]
 # [screenName] is the ID of the account being authenticated.
 
-stopMessageJP: "ƒT[ƒo[‚ªI—¹‚µ‚Ü‚µ‚½. [dateAndTime]"
+stopMessageJP: "ã‚µãƒ¼ãƒãƒ¼ãŒçµ‚äº†ã—ã¾ã—ãŸ. [dateAndTime]"
 
 stopMessageEN: "The server stopped. [dateAndTime]"
 
@@ -25,7 +25,7 @@ stopMessageEN: "The server stopped. [dateAndTime]"
 # [onlinePlayerName] is names of all the logged in players.
 # [onlinePlayerNumber] is Number of logged in players.
 
-loginMessageJP: "[playerName]‚ªƒƒOƒCƒ“‚µ‚Ü‚µ‚½. [dateAndTime]"
+loginMessageJP: "[playerName]ãŒãƒ­ã‚°ã‚¤ãƒ³ã—ã¾ã—ãŸ. [dateAndTime]"
 
 loginMessageEN: "[playerName] has logged in. [dateAndTime]"
 
@@ -34,7 +34,7 @@ loginMessageEN: "[playerName] has logged in. [dateAndTime]"
 # Available constants ... [dateAndTime], [serverName], [serverMOTD], [onlinePlayerName], [onlinePlayerNumber]
 # [playerName] is the name of the person who logout.
 
-logoutMessageJP: "[playerName]‚ªƒƒOƒAƒEƒg‚µ‚Ü‚µ‚½. [dateAndTime]"
+logoutMessageJP: "[playerName]ãŒãƒ­ã‚°ã‚¢ã‚¦ãƒˆã—ã¾ã—ãŸ. [dateAndTime]"
 
 logoutMessageEN: "[playerName] has logged out. [dateAndTime]"
 
@@ -43,15 +43,15 @@ logoutMessageEN: "[playerName] has logged out. [dateAndTime]"
 # Available constants ... [tweetString], [playerName], [dateAndTime], [serverName], [serverMOTD]
 # [playerName] is command "tweet" sender.
 
-tweetMessageJP: "ƒƒbƒZ[ƒW:[tweetString] ‘—MÒ:[playerName] [dateAndTime]"
+tweetMessageJP: "ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸:[tweetString] é€ä¿¡è€…:[playerName] [dateAndTime]"
 
 tweetMessageEN: "Message:[tweetString] (send by [playerName]) [dateAndTime]"
 
 # This message will be tweeted every <tweetInterval> minutes.
 # Available constants ... [dateAndTime], [serverName], [serverMOTD], [onlinePlayerName], [onlinePlayerNumber]
 
-regularTweetNPJP: "ƒIƒ“ƒ‰ƒCƒ“‚ÌƒvƒŒƒCƒ„[‚ª‚¢‚Ü‚¹‚ñ. [dateAndTime]"
-regularTweetJP: "[onlinePlayerNumber]l‚ÌƒvƒŒƒCƒ„[‚ªƒIƒ“ƒ‰ƒCƒ“‚Å‚·. ([onlinePlayerName]) [dateAndTime]"
+regularTweetNPJP: "ã‚ªãƒ³ãƒ©ã‚¤ãƒ³ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒã„ã¾ã›ã‚“. [dateAndTime]"
+regularTweetJP: "[onlinePlayerNumber]äººã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒã‚ªãƒ³ãƒ©ã‚¤ãƒ³ã§ã™. ([onlinePlayerName]) [dateAndTime]"
 
 regularTweetNPEN: "There is no player. [dateAndTime]"
 regularTweetEN: "[onlinePlayerNumber] players are online. ([onlinePlayerName]) [dateAndTime]"
@@ -67,3 +67,6 @@ logoutTweet: true
 deathTweet: true
 regularTweet: true
 timeline: false
+language: japanese
+
+# You can choose Japanese or English
